@@ -12,6 +12,7 @@ namespace CatchGoose
         [SerializeField] Button undoButton;
         [SerializeField] Button shuffleButton;
         [SerializeField] Button extractButton;
+        [SerializeField] Button tossButton;
         [SerializeField] GameObject resultPanel;
         [SerializeField] Text resultText;
         [SerializeField] Button nextButton;
@@ -29,6 +30,7 @@ namespace CatchGoose
             if (undoButton != null) undoButton.onClick.AddListener(game.UseUndo);
             if (shuffleButton != null) shuffleButton.onClick.AddListener(game.UseShuffle);
             if (extractButton != null) extractButton.onClick.AddListener(game.UseExtract);
+            if (tossButton != null) tossButton.onClick.AddListener(game.UseToss);
             if (nextButton != null) nextButton.onClick.AddListener(game.NextLevel);
             if (retryButton != null) retryButton.onClick.AddListener(game.RetryLevel);
             HideResult();

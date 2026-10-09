@@ -15,6 +15,12 @@ namespace CatchGoose
         public bool IsBlocked { get; private set; }
         /// <summary>场上的原始位置，撤回和洗牌都要用它复位。</summary>
         public Vector3 Origin { get; set; }
+        /// <summary>静止锚点，弹簧把物件往这儿拉；会跟着物件慢慢挪，所以颠过的布局不会自己弹回去。</summary>
+        public Vector3 Anchor { get; set; }
+        /// <summary>翻锅模拟用的速度。</summary>
+        public Vector3 Velocity { get; set; }
+        /// <summary>这一层的地面高度，抛起来后落回这里。</summary>
+        public float FloorY { get; set; }
 
         Renderer _renderer;
         Collider _collider;
@@ -25,6 +31,8 @@ namespace CatchGoose
             TypeId = typeId;
             LayerIndex = layerIndex;
             Origin = transform.position;
+            Anchor = transform.position;
+            Velocity = Vector3.zero;
             _renderer = GetComponent<Renderer>();
             _collider = GetComponent<Collider>();
             _baseColor = TypeColor(typeId);

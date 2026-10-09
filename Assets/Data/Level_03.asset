@@ -17,10 +17,10 @@ MonoBehaviour:
   layers: 3
   scatter: 0.35
   traySlots: 8
-  potRadiusBottom: 3
-  potRadiusTop: 2.2
+  spreadRadiusBottom: 3.6
+  spreadRadiusTop: 2.1
   layerHeight: 0.5
-  itemSize: 0.62
+  itemSize: 0.68
   undoCount: 3
   shuffleCount: 2
   extractCount: 1

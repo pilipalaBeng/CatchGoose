@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90dd000bc1d72544abf68b99aae6869, type: 3}
   m_Name: Level_02
   m_EditorClassIdentifier: 
-  totalItems: 54
-  typeCount: 8
+  totalItems: 63
+  typeCount: 9
   layers: 3
   scatter: 0.2
   traySlots: 8
-  potRadiusBottom: 3
-  potRadiusTop: 2.2
+  spreadRadiusBottom: 3.6
+  spreadRadiusTop: 2
   layerHeight: 0.5
-  itemSize: 0.62
+  itemSize: 0.68
   undoCount: 3
   shuffleCount: 2
   extractCount: 1

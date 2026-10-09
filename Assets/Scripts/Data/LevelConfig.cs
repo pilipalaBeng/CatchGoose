@@ -23,11 +23,13 @@ namespace CatchGoose
         public int traySlots = 8;
 
         [Header("布局")]
-        [Tooltip("底层半径，要能放下 totalItems/layers 个物体，否则会挤成一团")]
-        public float potRadiusBottom = 3.0f;
-        public float potRadiusTop = 2.2f;
+        [Tooltip("最底层物件的散布半径（锅心为 0）。越大越铺开，越小越往锅心挤")]
+        public float spreadRadiusBottom = 3.3f;
+        [Tooltip("最顶层物件的散布半径。比底层小就自然堆成丘")]
+        public float spreadRadiusTop = 1.7f;
+        [Tooltip("每层往上叠多高。必须大于锅壁在同一水平距离内的高差，否则会破坏「有解」的保证")]
         public float layerHeight = 0.5f;
-        public float itemSize = 0.62f;
+        public float itemSize = 0.68f;
 
         [Header("道具（每关重置，不看广告）")]
         public int undoCount = 3;

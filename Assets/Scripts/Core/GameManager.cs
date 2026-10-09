@@ -146,6 +146,13 @@ namespace CatchGoose
             RefreshUI();
         }
 
+        /// <summary>颠锅：整体抛一下，把压在底下的翻上来。有冷却，但不消耗次数。</summary>
+        public void UseToss()
+        {
+            if (_finished || board == null) return;
+            board.Toss();
+        }
+
         public void UseShuffle()
         {
             if (_finished || _shuffleLeft <= 0) return;
